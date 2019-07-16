@@ -1,0 +1,512 @@
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+
+body{
+	background-image:url(../../month/in%20use/head.png),linear-gradient(#FFD150,#FF9827);
+	background-position: center top,center top;
+	background-size:100%,cover;
+	background-repeat: no-repeat,no-repeat;
+	font-family: 'Kanit', sans-serif;
+	padding-bottom: 0px;
+}
+
+
+
+.redStrip{
+	max-width: 1140px;
+	height: 100px;
+	background-color: #E64741;
+	margin-bottom: 0px;
+	margin-top: -10px;
+	}
+
+.topPage{
+	background-color:rgba(255,255,255,0.7);
+	height: 430px;
+	}
+
+
+.pageDown .topPage{
+	padding-left: 150px;
+	font-family: 'Kanit', sans-serif;
+	border-radius: 0px 0px 0px 0px;
+	
+}
+
+.randomTitle{
+	font-family: 'Kanit', sans-serif;
+	margin-bottom: 0px;
+}
+
+.buttonRandom{
+	margin-top: 50px;
+	text-align:center;
+}
+
+
+.randombytype{
+	margin-top: 0px;
+	padding-top: 30px;
+	text-align:center;
+	font-size: 40px;
+	font-weight: lighter;
+	color: #ffffff;
+}
+
+.boxwhite{
+	height: 250px;;
+	max-width: 1140px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 0px;
+	background-color: rgba(255,255,255,0.7);	
+
+}
+
+.box{
+	max-width: 1140px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 0px;
+	height: 400px;
+
+}
+
+#food{
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../in%20use/food4.png);
+	max-width: auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.randomBox{
+	width: 500px;
+	height: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color:rgba(255,255,255,0.5);
+	margin-top: auto;
+	margin-bottom: auto;
+	border-radius: 15px;
+	position: relative;
+}
+
+.randomText{
+	position: absolute;
+	width: 500px;
+}
+
+.text1{
+	padding-top: 20px; text-align:center;
+}
+
+.text2{
+	padding-top: 50px; text-align:center;
+}
+
+
+.text3{
+	padding-top: 20px; 
+	text-align:center;
+	margin-left: 205px;
+	text-decoration: underline;
+	color: rgba(199,19,22,1.00);
+	font-size: 18px;
+}
+
+.buttonRandom2{
+	font-size:25px;
+	width : 200px;
+	margin-left: 150px;
+	margin-top: 100px;
+	border-radius:15px;
+	box-shadow:0px 0px 25px rgba(59,59,59,0.66);
+}
+
+	
+.footer{
+	height: 200px;
+	background-color:rgba(215,122,41,1.00);
+	position:relative;
+}
+
+.footerText{
+	text-align: center;
+	font-size: 14px;
+	padding-top: 50px;
+}
+
+.check{
+	text-align:center
+}
+
+.test1{
+	width: 340px;
+	float:left;
+	text-align:left;
+	padding-left: 120px;
+}
+
+.test2{
+	width: 340px;
+	float:left;
+	text-align:left;
+	padding-left: 120px;
+
+}
+
+.test3{
+	width: 340px;
+	float:left;
+	text-align:left;
+	padding-left: 120px;
+}
+
+.optionfont{
+	font-weight: lighter;
+	font-size: 22px;
+}
+
+.test4{
+	width: 250px;
+	float:left;
+	text-align:left;
+	padding-left: 100px;
+	max-height: 200px;
+}
+	
+.checkboxmargin{
+	margin-bottom: 20px;
+}
+
+.checkboxdeco{
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1500px){
+	
+	.navbar-default {
+    	background-color: transparent;
+    	border-color: transparent;
+	}
+	
+	.navbartop{
+	margin-top: -70px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+
+.site-title{
+	width : 70%;
+}
+
+
+} /*nav*/
+
+@media screen and (max-width: 1270px){
+	.navbar-default {
+    	background-color: transparent;
+    	border-color: transparent;
+	}
+	
+	.navbartop{
+	margin-top: -80px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+
+.site-title{
+	width : 70%;
+}
+	
+} /*nav*/
+
+@media screen and (max-width: 1240px){
+	.buttonRandom{
+	margin-top: 50px;
+	text-align:center;
+}
+} /*nav*/
+
+@media screen and (max-width: 1230px){
+	.navbar-default {
+    	background-color: transparent;
+    	border-color: transparent;
+	}
+	
+	.navbartop{
+	margin-top: -90px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 12px;
+	color: #F3903F;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 12px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+	
+} /*nav*/
+
+@media screen and (max-width: 990px){
+	.navbar-default {
+    	background-color: transparent;
+    	border-color: transparent;
+	}
+	
+	.navbartop{
+	margin-top: -140px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 12px;
+	color: #F3903F;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 12px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+
+.navbartop{
+	margin-top: -140px;
+}
+
+.site-title{
+	width: 60%;
+}
+	
+} /*nav*/
+
+@media screen and (max-width: 700px){
+	.navbar-default {
+    	background-color: transparent;
+    	border-color: transparent;
+	}
+	
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+}
+
+.navbartop{
+	margin-top: -50px;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+	
+} /*nav*/
+
+@media screen and (max-width: 1199px){
+	
+.topPage{
+	background-color:rgba(255,255,255,0.7);
+	height: 750px;
+	}
+	
+.pageDown .topPage{
+	padding-left: 80px;
+	font-family: 'Kanit', sans-serif;
+	border-radius: 0px 0px 0px 0px;
+	height: 400px;
+	
+}
+
+.pageDown .randomTitle{
+	font-family: 'Kanit', sans-serif;
+	margin-bottom: 0px;
+}
+
+.pageDown .buttonRandom{
+	margin-top: 50px;
+	text-align:center;
+}
+
+
+.boxwhite{
+	height: 400px;;
+	max-width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	background-color: rgba(255,255,255,0.7);	
+
+}
+
+.downPage .box{
+	max-width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	height: 400px;
+
+}
+
+.pageDown .imgbg{
+	max-width: auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.randomBox{
+	width: 400px;
+	height: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color:rgba(255,255,255,0.5);
+	margin-top: auto;
+	margin-bottom: auto;
+	border-radius: 15px;
+	position: relative;
+}
+
+.randomText{
+	position: absolute;
+	width: 400px;
+}
+
+.text2{
+	padding-top: 50px; text-align:center;
+}
+
+
+.buttonRandom2{
+	font-size:25px;
+	width : 200px;
+	margin-left: 100px;
+	margin-top: 100px;
+	border-radius:15px;
+	box-shadow:0px 0px 25px rgba(59,59,59,0.66);
+}
+
+.test4{
+	width: 300px;
+	float:left;
+	text-align:left;
+	padding-left: 100px;
+	max-height: 200px;
+}
+.test3{
+	width: 700px;
+	height: 200px;
+	float:left;
+	text-align:left;
+	padding-left: 120px;
+}
+}
+
+@media screen and (width: 992px){
+	
+
+
+} 
+
+@media screen and (max-width: 991px){
+	
+.footerText{
+	text-align: center;
+	font-size: 14px;
+	padding-top: 50px;
+}
+
+
+} /*foot text*/
+
+@media screen and (max-width: 767px){
+	
+.footerText{
+	text-align: center;
+	font-size: 14px;
+	padding-top: 50px;
+}
+
+
+
+} /*foot text*/
+
+@media screen and (max-width: 700px){
+	
+
+} 
+
+@media screen and (max-width: 650px){
+	
+
+.footerText{
+	text-align: center;
+	font-size: 12px;
+	padding-top: 50px;
+}
+
+} /*text*/
+
+@media screen and (max-width: 560px){
+
+.footerText{
+	text-align: center;
+	font-size: 12px;
+	padding-top: 50px;
+}
+
+
+
+} /*foot text*/
+
+/* home end*/
+
+
