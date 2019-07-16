@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="home/in use/icon.png">
+    <title>Random Food</title>
+    <link href="home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="home/css/navbar.css" rel="stylesheet">
+    <link href="home/css/home.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <script src="home/js/jquery.min.js" type="text/javascript"></script>
+	<script src="home/js/bootstrap.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="margin-top:-50px;">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div id="logo">
+					<h1 class="site-title">
+							<a href="home.html"><img src="home/in use/logo.png"  id="logoimg" height="auto" width="80%" style="margin-top: -120px;"></a>	
+					</h1><!-- end of .site-name -->
+
+				</div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right navbartop">
+              <li class="active"><a href="#" class="activeMenu topnavAc">หน้าหลัก <span class="sr-only">(current)</span></a></li>
+              <li><a href="random.html" class="nonactiveMenu topnav">สุ่ม</a></li>
+              <li><a href="menuAll.html" class="nonactiveMenu topnav">รวมเมนูอาหาร</a></li>
+              <li><a href="month2.html" class="nonactiveMenu topnav">เมนูแนะนำ</a></li>
+              <li><a href="about.html" class="nonactiveMenu topnav">เกี่ยวกับเรา</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron topPage randomTitle">
+        <h1 class="whattoeatThai">วันนี้กินอะไรดี ?</h1>
+        <h3 class="whattoeatEng">What should I eat today ?</h3>
+        <p class="buttonRandom">
+          <a class="btn btn-lg btn-primary btn-danger buttonRandom2" id="button1" role="button"> สุ่มเลย !</a>
+        </p>
+        <p class="foodName" id="allRanTxt">ข้าวผัดต้มยำปลากระป๋อง</p>
+      </div>
+	
+		<script>
+		  function WordShuffler(holder,opt){
+			  var that = this;
+			  var time = 0;
+			  this.now;
+			  this.then = Date.now();
+
+			  this.delta;
+			  this.currentTimeOffset = 0;
+
+			  this.word = null;
+			  this.currentWord = null;
+			  this.currentCharacter = 0;
+			  this.currentWordLength = 0;
+
+
+			  var options = {
+				fps : 20,
+				timeOffset : 5,
+				textColor : '#000',
+				fontSize : "50px",
+				useCanvas : false,
+				mixCapital : false,
+				mixSpecialCharacters : false,
+				needUpdate : true,
+				colors : [
+				  '#f44336','#e91e63','#9c27b0',
+				  '#673ab7','#3f51b5','#2196f3',
+				  '#03a9f4','#00bcd4','#009688',
+				  '#4caf50','#8bc34a','#cddc39',
+				  '#ffeb3b','#ffc107','#ff9800',
+				  '#ff5722','#795548','#9e9e9e',
+				  '#607d8b'
+				]
+			  }
+
+			  if(typeof opt != "undefined"){
+				for(key in opt){
+				  options[key] = opt[key];
+				}
+			  }
+
+
+
+			  this.needUpdate = true;
+			  this.fps = options.fps;
+			  this.interval = 1000/this.fps;
+			  this.timeOffset = options.timeOffset;
+			  this.textColor = options.textColor;
+			  this.fontSize = options.fontSize;
+			  this.mixCapital = options.mixCapital;
+			  this.mixSpecialCharacters = options.mixSpecialCharacters;
+			  this.colors = options.colors;
+
+			   this.useCanvas = options.useCanvas;
+
+			  this.chars = [
+				'ฟ','ห','ก','ด',
+				'ว','ส','า','เ',
+				'ง','ๆ','ไ','พ',
+				'ย','น','ร','ะ',
+				'บ','ล','ฃ','ช',
+				'ค','ต','จ','ข',
+				'ถ','ภ'
+			  ];
+			  this.specialCharacters = [
+				'!','§','$','%',
+				'&','/','(',')',
+				'=','?','_','<',
+				'>','^','°','*',
+				'#','-',':',';','~'
+			  ]
+
+			  if(this.mixSpecialCharacters){
+				this.chars = this.chars.concat(this.specialCharacters);
+			  }
+
+			  this.getRandomColor = function () {
+				var randNum = Math.floor( Math.random() * this.colors.length );
+				return this.colors[randNum];
+			  }
+
+			  //if Canvas
+
+			  this.position = {
+				x : 0,
+				y : 50
+			  }
+
+			  //if DOM
+			  if(typeof holder != "undefined"){
+				this.holder = holder;
+			  }
+
+			  if(!this.useCanvas && typeof this.holder == "undefined"){
+				console.warn('Holder must be defined in DOM Mode. Use Canvas or define Holder');
+			  }
+
+
+			  this.getRandCharacter = function(characterToReplace){    
+				if(characterToReplace == " "){
+				  return ' ';
+				}
+				var randNum = Math.floor(Math.random() * this.chars.length);
+				var lowChoice =  -.5 + Math.random();
+				var picketCharacter = this.chars[randNum];
+				var choosen = picketCharacter.toLowerCase();
+				if(this.mixCapital){
+				  choosen = lowChoice < 0 ? picketCharacter.toLowerCase() : picketCharacter;
+				}
+				return choosen;
+
+			  }
+
+			  this.writeWord = function(word){
+				this.word = word;
+				this.currentWord = word.split('');
+				this.currentWordLength = this.currentWord.length;
+
+			  }
+
+			  this.generateSingleCharacter = function (color,character) {
+				var span = document.createElement('span');
+				span.style.color = color;
+				span.innerHTML = character;
+				return span;
+			  }
+
+			  this.updateCharacter = function (time) {
+
+				  this.now = Date.now();
+				  this.delta = this.now - this.then;
+
+
+
+				  if (this.delta > this.interval) {
+					this.currentTimeOffset++;
+
+					var word = [];
+
+					if(this.currentTimeOffset === this.timeOffset && this.currentCharacter !== this.currentWordLength){
+					  this.currentCharacter++;
+					  this.currentTimeOffset = 0;
+					}
+					for(var k=0;k<this.currentCharacter;k++){
+					  word.push(this.currentWord[k]);
+					}
+
+					for(var i=0;i<this.currentWordLength - this.currentCharacter;i++){
+					  word.push(this.getRandCharacter(this.currentWord[this.currentCharacter+i]));
+					}
+
+
+					if(that.useCanvas){
+					  c.clearRect(0,0,stage.x * stage.dpr , stage.y * stage.dpr);
+					  c.font = that.fontSize + " Kanit";
+					  var spacing = 0;
+					  word.forEach(function (w,index) {
+						if(index > that.currentCharacter){
+						  c.fillStyle = that.getRandomColor();
+						}else{
+						  c.fillStyle = that.textColor;
+						}
+						c.fillText(w, that.position.x + spacing, that.position.y);
+						spacing += c.measureText(w).width;
+					  });
+					}else{
+
+					  if(that.currentCharacter === that.currentWordLength){
+						that.needUpdate = false;
+					  }
+					  this.holder.innerHTML = '';
+					  word.forEach(function (w,index) {
+						var color = null
+						if(index > that.currentCharacter){
+						  color = that.getRandomColor();
+						}else{
+						  color = that.textColor;
+						}
+						that.holder.appendChild(that.generateSingleCharacter(color, w));
+					  }); 
+					}
+					this.then = this.now - (this.delta % this.interval);
+				  }
+			  }
+
+			  this.restart = function () {
+				this.currentCharacter = 0;
+				this.needUpdate = true;
+			  }
+
+			  function update(time) {
+				time++;
+				if(that.needUpdate){
+				  that.updateCharacter(time);
+				}
+				requestAnimationFrame(update);
+			  }
+
+			  this.writeWord(this.holder.innerHTML);
+
+
+			  console.log(this.currentWord);
+			  update(time);
+			}
+
+
+
+
+			var atext = document.getElementById('allRanTxt');
+			var shuffler1 = document.getElementById('button1');
+
+
+
+			  shuffler1.addEventListener('click',function () {
+				allRandom();
+				 var allRan = new WordShuffler(atext,{
+				  textColor : '#3a3a3a',
+				  timeOffset : 2
+				});
+			  });
+
+			function allRandom(){
+				var allRan = Math.floor((Math.random() * 30) + 1);
+				var foodName = ["ยำแอปเปิ้ล","สเต็กดอลลี่","ผักโขมผัดไข่","ขนมกล้วย","เชอร์รี่โคโคนัทบาร์","กรีกสลัด","ซุปฟักทอง","ผัดเปรี้ยวหวานทะเล","คุ้กกี้ข้าวโอ๊ดลูกเกด","ปลานิลทอดแมคคาเดเมีย","สลัดโรลปูอัด","ส้มตำ","บิงซู","บัวลอย","ลูกชุบ","ข้าวเหนียวมะม่วง","ปอเปี๊ยะกุ้งสด","ก๋วยเตี๋ยวราดหน้าเนื้อสับ","ข้าวผัดธัญพืชกับสเต็กปลาแซลมอน","เบอร์ริโต้ลาบซีฟู้ด","กล้วยน้ำว้าคลุกมะพร้าว","ข้าวโพดผัดไข่เค็ม","ฉู่ฉี่ปลาลีน","ซูชิอกไก่","ต้มจืดถั่วงอก","น้ำพริกอ่องเต้าหู้","ผัดไทใส่ไข่","พิซซ่าขนมปัง","ราดหน้าเต้าหู้น้ำแดง","ลาบไข่ขาว"];
+
+				document.getElementById("allRanTxt").innerHTML = foodName[allRan-1];
+				
+				if(allRan==shuffler1.value){
+						do{
+							allRan = Math.floor((Math.random() * 30) + 1);
+						}while(allRan==shuffler1.value);
+						
+					}
+						
+				document.getElementById("button1").setAttribute('value',allRan);
+				
+					
+			}
+		</script><!--AllRandom script-->
+      
+      <!--<img src="in use/red.png" width="100%;" style="margin-left:auto; margin-right:auto; margin-top:-10px;">-->
+      <div class="redStrip"><h2 class="randombytype">สุ่มตามประเภทอาหาร</h2></div>
+      
+      <div class="pageDown box">
+      	<div class="container">
+      		
+         	<div class="innerbox" >
+           	  <p class="buttonRandom3" >
+          			<a id="button2" onClick="healthRan(this)" class="btn btn-lg btn-primary btn-warning buttonRandomText1" role="button"> สุ่มเลย !</a>
+				</p>
+                <p class="foodName2" id="healthTxt">สลัดสามสี</p><p class="foodName2"><a href="#" id="link1">วิธีทำเมนูนี้</a></p>
+				
+            </div>
+		  <img src="home/in use/card1.png" width="100%" style="margin-top:5%; margin-left:-2.7%;">
+      	</div> <!--สุ่ม1-->
+		<script>
+
+				function healthRan(health){
+					$("#food1").hide();
+					var healthRan = Math.floor((Math.random() * 4) + 1);
+					var healthName = ["กล้วยน้ำว้าคลุกมะพร้าว","ซูชิอกไก่","ต้มจืดถั่วงอก","ลาบไข่ขาว"];
+
+					if(healthRan==health.value){
+						do{
+							healthRan = Math.floor((Math.random() * 4) + 1);
+						}while(healthRan==health.value);
+						
+					}
+						
+					document.getElementById("button2").setAttribute('value',healthRan);
+					document.getElementById("link1").setAttribute('href',"Food menu/healthFood/menu"+healthRan+".html");
+					document.getElementById("healthTxt").innerHTML = healthName[healthRan-1];
+					document.getElementById("food1").src = "Food Pic/health/"+healthRan+".jpg";
+					var hRan = new WordShuffler(document.getElementById('healthTxt'),{
+				  		textColor : '#3a3a3a',
+						timeOffset : 3
+					});
+					$("#food1").fadeIn(3000);
+
+				}
+			</script><!--Health Random script-->
+        
+         <div class="outterbox">
+            	<img src="home/in use/food1.jpg" class="pic" id="food1">
+            </div>
+         <div class="outterbox"></div>            
+      	
+        	<div class="container">
+      		<img src="home/in use/card2.png" width="100%" style="margin-top:5%; margin-left:-2.7%;">
+         	<div class="innerbox">
+           	  <p class="buttonRandom3">
+          		<a class="btn btn-lg btn-primary btn-warning buttonRandomText1" id="button3" onClick="manRan(this)" role="button"> สุ่มเลย !</a>
+                <p class="foodName2" id="manTxt">ซูชิอะโวคาโด</p> <p class="foodName2"><a id="link2" href="#">วิธีทำเมนูนี้</a></p>
+       			</p>
+            </div>
+      	</div> <!--สุ่ม2-->
+		 <script>
+				function manRan(man){
+					$("#food2").hide();
+					var manRan = Math.floor((Math.random() * 6) + 1);
+					var manName = ["ข้าวโพดผัดไข่เค็ม","ฉู่ฉี่ปลาลีน","น้ำพริกอ่องเต้าหู้","ผัดไทใส่ไข่","พิซซ่าขนมปัง","ราดหน้าเต้าหู้น้ำแดง"];
+					
+					if(manRan==man.value){
+						do{
+							manRan = Math.floor((Math.random() * 6) + 1);
+						}while(manRan==man.value);
+						
+					}
+						
+					document.getElementById("button3").setAttribute('value',manRan);
+					document.getElementById("manTxt").innerHTML = manName[manRan-1];
+					document.getElementById("food2").src="Food Pic/man/"+manRan+".jpg";
+					document.getElementById("link2").setAttribute('href',"Food menu/manFood/menu"+manRan+".html");
+					var mRan = new WordShuffler(document.getElementById('manTxt'),{
+				  		textColor : '#3a3a3a',
+						timeOffset : 3
+					});
+					$("#food2").fadeIn(3000);
+
+				}
+			</script><!--Man Random script-->
+        
+        <div class="outterbox2">
+            	<img src="home/in use/food2.jpg" class="pic" id="food2">
+            </div>  
+        
+       <div class="container">
+      		<img src="home/in use/card3.png" width="100%" style="margin-top:5%; margin-left:-2.7%;">
+         	<div class="innerbox">
+           	  <p class="buttonRandom3">
+          		<a class="btn btn-lg btn-primary btn-warning buttonRandomText1" id="button4" onClick="sweetRan(this)" role="button"> สุ่มเลย !</a>
+                <p class="foodName2" id="sweetTxt">คุ้กกี้ไอศครีม</p> <p class="foodName2"><a id="link3" href="#">วิธีทำเมนูนี้</a></p> 
+       			</p>
+            </div>
+      	</div> <!--สุ่ม3-->
+	  	<script>
+				function sweetRan(sweet){
+					$("#food3").hide();
+					var sweetRan = Math.floor((Math.random() * 4) + 1);
+					var sweetName = ["บิงซู","บัวลอย","ลูกชุบ","ข้าวเหนียวมะม่วง"];
+					if(sweetRan==sweet.value){
+						do{
+							sweetRan = Math.floor((Math.random() * 4) + 1);
+						}while(sweetRan==sweet.value);
+						
+					}
+						
+					document.getElementById("button4").setAttribute('value',sweetRan);
+
+					document.getElementById("sweetTxt").innerHTML = sweetName[sweetRan-1];
+					
+					document.getElementById("food3").src="Food Pic/sweet/"+sweetRan+".jpg";
+					document.getElementById("link3").setAttribute('href',"Food menu/sweetFood/menu"+sweetRan+".html");
+					var sRan = new WordShuffler(document.getElementById('sweetTxt'),{
+				  		textColor : '#3a3a3a',
+						timeOffset : 3
+					});
+					
+					$("#food3").fadeIn(3000);
+				}
+			</script><!--Sweet Random script-->
+        
+        <div class="outterbox3">
+            	<img src="home/in use/food3.jpg" class="pic" id="food3">
+            </div>  
+        
+       
+      </div> <!--page down-->
+      
+      
+      
+      
+      
+
+    </div> <!-- /container -->
+	<div class="footer">
+    <p class="footerText">Copyright © Random Food,Inc. All Rights Reserved.<br>เลขที่ 1771/1 ซ.พัฒนาการ 37 ถนนพัฒนาการ แขวงสวนหลวง เขตสวนหลวง กรุงเทพฯ 10250
+<br>โทรศัพท์ 0-2763-2600</p>
+      	
+    </div>
+
+  </body>
+</html>

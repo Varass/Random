@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	<!-- Required meta tags -->
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+		<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+	    <title>Test Random System</title>
+ 	</head>
+	
+  	<body>
+    	<h1 class="text-center form-check">Random</h1>
+		<div class="text-center">
+			<th><label for="have">Have</label></th>
+			<td>
+				<br><input type="checkbox" name="Have" id="Apple" value="Apple" class="h ml-4" onClick="ckChange1(this)"> Apple
+				<input type="checkbox" name="Have" id="Papaya" value="Papaya" class="h ml-4" onClick="ckChange(this,demo2)"> Papaya
+				<input type="checkbox" name="Have" id="Banana" value="Banana" class="h ml-4" onClick="ckChange(this,demo2)"> Banana
+				<input type="checkbox" name="Have" id="Orange" value="Orange" class="h ml-4" onClick="ckChange(this,demo2)"> Orange
+			</td>
+		</div>
+		
+		<br>
+		<p class="text-center" id="demo1"></p>
+		 <a class="btn btn-lg btn-primary btn-danger buttonRandom2 " role="button" style="" id="ranBut"> สุ่มเลย !</a>
+    	 <input type="button" value="Get Value Using Parent Tag" id="buttonParent">
+		<br>
+		<div class="text-center">
+			<th><label for="allergy">Allergy</label></th>
+			<td>
+				<br><input type="checkbox" name="Allergy" id="aApple" value="Apple" class="ml-4" onClick="ckChange2(this)"> Apple
+				<input type="checkbox" name="Allergy" id="aPapaya" value="Papaya" class="ml-4" onClick="ckChange2(this,demo2)"> Papaya
+				<input type="checkbox" name="Allergy" id="aBanana" value="Banana" class="ml-4" onClick="ckChange2(this,demo2)"> Banana
+				<input type="checkbox" name="Allergy" id="aOrange" value="Orange" class="ml-4" onClick="ckChange2(this,demo2)"> Orange
+			</td>
+		</div>
+		
+		<script>
+			$(document).ready(function () {
+				/* Get the checkboxes values based on the class attached to each check box */
+				$("#ranBut").click(function() {
+					getValueUsingClass();
+				});
+
+				/* Get the checkboxes values based on the parent div id */
+				
+			});
+
+			function getValueUsingClass(){
+				/* declare an checkbox array */
+				var chkArray = [];
+
+				/* look for all checkboes that have a class 'chk' attached to it and check if it was checked */
+				$(".h:checked").each(function() {
+					chkArray.push($(this).val());
+				});
+
+				/* we join the array separated by the comma */
+				var selected;
+				selected = chkArray.join(',') ;
+
+				/* check if there is selected checkboxes, by default the length is 1 as it contains one single comma */
+				if(selected.length > 0){
+					alert("You have selected " + selected);	
+				}else{
+					alert("Please at least check one of the checkbox");	
+				}
+			}
+		</script>
+		
+		<script>
+			function ckChange(ckType,haveTxt){
+				var ckName = document.getElementsByName(ckType.name);
+				var checked = document.getElementById(ckType.id);
+				var anotherCkName;
+				var	checkedAnother;
+				var have = [];
+				
+				if(ckName.checked){
+					anotherCkName = document.getElementsByName("Allergy");
+					atID = "a"+ckType.id;
+					checkedAnother = document.getElementById(atID);
+					
+				}
+				
+				if (checked.checked) {
+      				for(var i=0; i < anotherCkName.length; i++){
+
+					  if((!anotherCkName[i].checked) && anotherCkName[i].id == ("a"+ckType.id)){
+						  anotherCkName[i].disabled = true;
+					  }
+				  	} 
+					for(var i=0; i < have.length; i++)
+					{
+						if(have[i]!=ckType.id){
+							have[i] = ckType.id;
+						}
+					}
+				}
+				else {
+				  for(var i=0; i < anotherCkName.length; i++){
+					  if((!anotherCkName[i].checked) && anotherCkName[i].id == ("a"+ckType.id)){
+						  anotherCkName[i].disabled = false;
+					  }
+				  }
+				}
+				
+				
+				document.getElementById("demo2").setAttribute('value',txt);
+					
+							 
+					document.getElementById("demo3").setAttribute('value',txt);
+							
+
+					document.getElementById("demo2").innerHTML = txt;
+					document.getElementById("demo3").innerHTML = txt;
+			}
+			
+			function ckChange2(ckType){
+				var ckName = document.getElementsByName(ckType.name);
+				var checked = document.getElementById(ckType.id);
+				var anotherCkName;
+				var	checkedAnother;
+				var allergy= [];
+				
+				
+				if(ckName.value == ("Allergy").value){
+					anotherCkName = document.getElementsByName("Have");
+					atID = (ckType.id).substr(1);
+					checkedAnother = document.getElementById(atID);
+					
+				}
+				
+				if (checked.checked) {
+      				for(var i=0; i < anotherCkName.length; i++){
+
+					  if((!anotherCkName[i].checked) && anotherCkName[i].id == ((ckType.id).substr(1))){
+						  anotherCkName[i].disabled = true;
+					  }
+				  } 
+				}
+				else {
+				  for(var i=0; i < anotherCkName.length; i++){
+					  if((!anotherCkName[i].checked) && anotherCkName[i].id == ((ckType.id).substr(1))){
+						  anotherCkName[i].disabled = false;
+					  }
+				  }
+				}    
+				
+			}
+		</script>
+		
+	    <!-- Optional JavaScript -->
+	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  	</body>
+</html>

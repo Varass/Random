@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="random/in use/icon.png">
+    <title>Random Food</title>
+    <link href="random/css/bootstrap.min.css" rel="stylesheet">
+    <link href="random/css/navbar.css" rel="stylesheet">
+    <link href="random/css/random.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <script src="random/js/jquery.min.js" type="text/javascript"></script>
+	<script src="random/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="random/js/home.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="margin-top:-50px;">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div id="logo">
+					<h1 class="site-title">
+							<a href="home.html"><img src="random/in use/logo.png"  id="logoimg" height="auto" width="80%" style="margin-top: -120px;"/></a>	
+					</h1><!-- end of .site-name -->
+
+				</div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right navbartop">
+              <li><a href="home.html" class="nonactiveMenu topnav">หน้าหลัก <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="#" class="activeMenu topnavAc">สุ่ม</a></li>
+              <li><a href="menuAll.html" class="nonactiveMenu topnav">รวมเมนูอาหาร</a></li>
+              <li><a href="month2.html" class="nonactiveMenu topnav">เมนูแนะนำ</a></li>
+              <li><a href="about.html" class="nonactiveMenu topnav">เกี่ยวกับเรา</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="redStrip"><h2 class="randombytype">สุ่มตามวัตถุดิบ</h2></div>
+      <div class="jumbotron topPage randomTitle" style="text-align:center;">
+     
+			<div class="test1">
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input checkboxdeco h" type="checkbox" value="เนื้อหมู" id="เนื้อหมู" id="defaultCheck1" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck1">เนื้อหมู</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="เนื้อไก่" id="เนื้อไก่" id="defaultCheck2" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck2">เนื้อไก่</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="เนื้อวัว" id=">เนื้อวัว" id="defaultCheck3" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck2">เนื้อวัว</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="ปลา" id="ปลา" id="defaultCheck4" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck1">ปลา</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="กุ้ง" id="กุ้ง" id="defaultCheck5" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck2">กุ้ง</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="ปู" id="ปู" id="defaultCheck6" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck2">ปู</label>
+				</div>
+
+			</div>
+		  
+			<div class="test2">
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="หอย" id="หอย" id="defaultCheck7" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck1">หอย</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="หมึก" id="หมึก" id="defaultCheck8" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck2">หมึก</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="ผัก" id="ผัก" id="defaultCheck9" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck1">ผัก</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="ผลไม้" id="ผลไม้" id="defaultCheck10" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck2">ผลไม้</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="ธัญพืช" id="ธัญพืช"  id="defaultCheck11" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck1">ธัญพืช</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="เส้นก๋วยเตี๋ยว" id="เส้นก๋วยเตี๋ยว" id="defaultCheck12" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck2">เส้นก๋วยเตี๋ยว</label>
+				</div>
+			</div>
+		  
+			<div class="test3">
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="เส้นพาสต้า" id="เส้นพาสต้า" id="defaultCheck13" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck1">เส้นพาสต้า</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="เต้าหู้" id="เต้าหู้" id="defaultCheck14" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck2">เต้าหู้</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="ไข่" id="ไข่" id="defaultCheck15" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label  optionfont" for="defaultCheck1">ไข่</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="form-check-input h" type="checkbox" value="นม" id="นม" id="defaultCheck16" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck2">นม</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="h form-check-input " type="checkbox" value="แป้งต่างๆ" id="แป้งต่างๆ" id="defaultCheck17" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck1">แป้งต่างๆ</label>
+				</div>
+				<div class="form-check checkboxmargin">
+				  <input class="h form-check-input " type="checkbox" value="ถั่วต่างๆ" id="ถั่วต่างๆ" id="defaultCheck18" name="Have" onClick="ckChange1(this)">
+				  <label class="form-check-label optionfont" for="defaultCheck2">ถั่วต่างๆ</label>
+				</div>
+			</div>
+   
+ 		
+        
+      </div>
+      
+      <!--<img src="in use/red.png" width="100%;" style="margin-left:auto; margin-right:auto; margin-top:-10px;">-->
+      <div class="redStrip"><h2 class="randombytype">สุ่มตามอาหารที่แพ้</h2></div>
+      
+      <div class="pageDown boxwhite">
+      
+       <div class="jumbotron topPage randomTitle">
+        
+        
+<div class="test4">
+        	<div class="form-check checkboxmargin">
+  <input class="form-check-input a" type="checkbox" value="นม" name="Allergy"  id="aนม" id="defaultCheck19" onClick="ckChange2(this)">
+  <label class="form-check-label optionfont" for="defaultCheck2">นม</label>
+</div>
+			<div class="form-check checkboxmargin">
+  <input class="form-check-input a" type="checkbox" value="ปลา" name="Allergy" id="aปลา" id="defaultCheck20" onClick="ckChange2(this)">
+  <label class="form-check-label optionfont" for="defaultCheck2">ปลา</label>
+</div>
+<div class="form-check checkboxmargin">
+  <input class="form-check-input a" type="checkbox" value="หมึก" name="Allergy" id="aหมึก" id="defaultCheck21" onClick="ckChange2(this)">
+  <label class="form-check-label optionfont" for="defaultCheck2">หมึก</label>
+</div>
+        
+        </div> <!--box1-->
+		   
+        <div class="test4">
+        <div class="form-check checkboxmargin">
+  <input class="form-check-input a" type="checkbox" value="ไข่" name="Allergy" id="aไข่" id="defaultCheck24" onClick="ckChange2(this)">
+  <label class="form-check-label optionfont" for="defaultCheck2">ไข่</label>
+</div>
+			<div class="form-check checkboxmargin">
+  <input class="form-check-input a" type="checkbox" value="กุ้ง" name="Allergy" id="aกุ้ง" id="defaultCheck25" onClick="ckChange2(this)">
+  <label class="form-check-label optionfont" for="defaultCheck2">กุ้ง</label>
+</div>
+       <div class="form-check checkboxmargin">
+  <input class="form-check-input a" type="checkbox" value="ถั่วต่างๆ" name="Allergy" id="aถั่วต่างๆ" id="defaultCheck26" onClick="ckChange2(this)">
+  <label class="form-check-label optionfont" for="defaultCheck2">ถั่วต่างๆ</label>
+</div>
+        </div><!--box2-->
+        
+        <div class="test4">
+        
+			<div class="form-check checkboxmargin">
+  <input class="form-check-input a" type="checkbox" value="ปู" name="Allergy" id="aปู" id="defaultCheck27" onClick="ckChange2(this)">
+  <label class="form-check-label optionfont" for="defaultCheck2">ปู</label>
+</div>
+       <div class="form-check checkboxmargin">
+  <input class="form-check-input a" type="checkbox" value="แป้งต่างๆ" name="Allergy" id="aแป้งต่างๆ" id="defaultCheck22" onClick="ckChange2(this)">
+  <label class="form-check-label optionfont" for="defaultCheck2">แป้งต่างๆ</label>
+</div>
+			<div class="form-check checkboxmargin">
+  <input class="form-check-input a" type="checkbox" value="หอย" name="Allergy" id="aหอย" id="defaultCheck23" onClick="ckChange2(this)">
+  <label class="form-check-label optionfont" for="defaultCheck2">หอย</label>
+</div>
+        </div> <!--box3-->
+		   
+
+         
+       
+        </div>
+		  
+        
+      </div>
+      	
+		
+      <div class="pageDown box">
+		  <div class="jumbotron randomTitle imgbg"  id="food">
+			  
+				<div class="randomBox">
+						<div class="randomText" >
+							<p class="text1" style="font-size:18px; ">เลือกครบแล้ว!</p>
+						</div>
+						<div class="randomText">
+							<p class="text2" style="font-size:28px; font-weight: bold;" >วันนี้กินอะไรดี ?</p>
+						</div>
+						<a class="btn btn-lg btn-primary btn-danger buttonRandom2 " role="button" style="" id="ranBut"> สุ่มเลย !</a>
+						 <div class="randomText">
+							<p class="text1" style="font-size:28px;" id="text1">เต้าหู้นึ่งซีอิ๋ว</p>
+							<a class="text3" id="link">วิธีทำเมนูนี้</a>
+						</div>
+
+				</div>
+
+		  </div>
+       
+      </div> <!--page down-->
+      
+      
+      <script>
+		  	function WordShuffler(holder,opt){
+			  var that = this;
+			  var time = 0;
+			  this.now;
+			  this.then = Date.now();
+
+			  this.delta;
+			  this.currentTimeOffset = 0;
+
+			  this.word = null;
+			  this.currentWord = null;
+			  this.currentCharacter = 0;
+			  this.currentWordLength = 0;
+
+
+			  var options = {
+				fps : 20,
+				timeOffset : 5,
+				textColor : '#000',
+				fontSize : "50px",
+				useCanvas : false,
+				mixCapital : false,
+				mixSpecialCharacters : false,
+				needUpdate : true,
+				colors : [
+				  '#f44336','#e91e63','#9c27b0',
+				  '#673ab7','#3f51b5','#2196f3',
+				  '#03a9f4','#00bcd4','#009688',
+				  '#4caf50','#8bc34a','#cddc39',
+				  '#ffeb3b','#ffc107','#ff9800',
+				  '#ff5722','#795548','#9e9e9e',
+				  '#607d8b'
+				]
+			  }
+
+			  if(typeof opt != "undefined"){
+				for(key in opt){
+				  options[key] = opt[key];
+				}
+			  }
+
+
+
+			  this.needUpdate = true;
+			  this.fps = options.fps;
+			  this.interval = 1000/this.fps;
+			  this.timeOffset = options.timeOffset;
+			  this.textColor = options.textColor;
+			  this.fontSize = options.fontSize;
+			  this.mixCapital = options.mixCapital;
+			  this.mixSpecialCharacters = options.mixSpecialCharacters;
+			  this.colors = options.colors;
+
+			   this.useCanvas = options.useCanvas;
+
+			  this.chars = [
+				'ฟ','ห','ก','ด',
+				'ว','ส','า','เ',
+				'ง','ๆ','ไ','พ',
+				'ย','น','ร','ะ',
+				'บ','ล','ฃ','ช',
+				'ค','ต','จ','ข',
+				'ถ','ภ'
+			  ];
+			  this.specialCharacters = [
+				'!','§','$','%',
+				'&','/','(',')',
+				'=','?','_','<',
+				'>','^','°','*',
+				'#','-',':',';','~'
+			  ]
+
+			  if(this.mixSpecialCharacters){
+				this.chars = this.chars.concat(this.specialCharacters);
+			  }
+
+			  this.getRandomColor = function () {
+				var randNum = Math.floor( Math.random() * this.colors.length );
+				return this.colors[randNum];
+			  }
+
+			  //if Canvas
+
+			  this.position = {
+				x : 0,
+				y : 50
+			  }
+
+			  //if DOM
+			  if(typeof holder != "undefined"){
+				this.holder = holder;
+			  }
+
+			  if(!this.useCanvas && typeof this.holder == "undefined"){
+				console.warn('Holder must be defined in DOM Mode. Use Canvas or define Holder');
+			  }
+
+
+			  this.getRandCharacter = function(characterToReplace){    
+				if(characterToReplace == " "){
+				  return ' ';
+				}
+				var randNum = Math.floor(Math.random() * this.chars.length);
+				var lowChoice =  -.5 + Math.random();
+				var picketCharacter = this.chars[randNum];
+				var choosen = picketCharacter.toLowerCase();
+				if(this.mixCapital){
+				  choosen = lowChoice < 0 ? picketCharacter.toLowerCase() : picketCharacter;
+				}
+				return choosen;
+
+			  }
+
+			  this.writeWord = function(word){
+				this.word = word;
+				this.currentWord = word.split('');
+				this.currentWordLength = this.currentWord.length;
+
+			  }
+
+			  this.generateSingleCharacter = function (color,character) {
+				var span = document.createElement('span');
+				span.style.color = color;
+				span.innerHTML = character;
+				return span;
+			  }
+
+			  this.updateCharacter = function (time) {
+
+				  this.now = Date.now();
+				  this.delta = this.now - this.then;
+
+
+
+				  if (this.delta > this.interval) {
+					this.currentTimeOffset++;
+
+					var word = [];
+
+					if(this.currentTimeOffset === this.timeOffset && this.currentCharacter !== this.currentWordLength){
+					  this.currentCharacter++;
+					  this.currentTimeOffset = 0;
+					}
+					for(var k=0;k<this.currentCharacter;k++){
+					  word.push(this.currentWord[k]);
+					}
+
+					for(var i=0;i<this.currentWordLength - this.currentCharacter;i++){
+					  word.push(this.getRandCharacter(this.currentWord[this.currentCharacter+i]));
+					}
+
+
+					if(that.useCanvas){
+					  c.clearRect(0,0,stage.x * stage.dpr , stage.y * stage.dpr);
+					  c.font = that.fontSize + " Kanit";
+					  var spacing = 0;
+					  word.forEach(function (w,index) {
+						if(index > that.currentCharacter){
+						  c.fillStyle = that.getRandomColor();
+						}else{
+						  c.fillStyle = that.textColor;
+						}
+						c.fillText(w, that.position.x + spacing, that.position.y);
+						spacing += c.measureText(w).width;
+					  });
+					}else{
+
+					  if(that.currentCharacter === that.currentWordLength){
+						that.needUpdate = false;
+					  }
+					  this.holder.innerHTML = '';
+					  word.forEach(function (w,index) {
+						var color = null
+						if(index > that.currentCharacter){
+						  color = that.getRandomColor();
+						}else{
+						  color = that.textColor;
+						}
+						that.holder.appendChild(that.generateSingleCharacter(color, w));
+					  }); 
+					}
+					this.then = this.now - (this.delta % this.interval);
+				  }
+			  }
+
+			  this.restart = function () {
+				this.currentCharacter = 0;
+				this.needUpdate = true;
+			  }
+
+			  function update(time) {
+				time++;
+				if(that.needUpdate){
+				  that.updateCharacter(time);
+				}
+				requestAnimationFrame(update);
+			  }
+
+			  this.writeWord(this.holder.innerHTML);
+
+
+			  console.log(this.currentWord);
+			  update(time);
+			}
+
+
+
+
+			var atext = document.getElementById('text1');
+			var shuffler1 = document.getElementById('ranBut');
+
+
+
+			  shuffler1.addEventListener('click',function () {
+				allRandom();
+				 var allRan = new WordShuffler(atext,{
+				  timeOffset : 2
+				});
+			  });
+
+		  
+			$(document).ready(function () {
+				/* Get the checkboxes values based on the class attached to each check box */
+				$("#ranBut").click(function() {
+					resetChk();
+					getValueUsingClass();
+				});
+			});
+		  
+		  	var chkArray = [];
+		  	var chkArray2 = [];
+		  
+		  	function resetChk(){
+				chkArray = [];
+				chkArray2 = [];
+			}
+		  
+			function getValueUsingClass(){
+				/* declare an checkbox array */
+				
+
+				/* look for all checkboes that have a class 'chk' attached to it and check if it was checked */
+				$(".h:checked").each(function() {
+					chkArray.push($(this).val());
+				});
+				
+				$(".a:checked").each(function() {
+					chkArray2.push($(this).val());
+				});
+
+				/* we join the array separated by the comma */
+				var selected;
+				selected = chkArray.join(',') ;
+				selected2 = chkArray2.join(',') ;
+				var s =[];
+				var sNum =[];
+				var n = [];
+				var nNum = [];
+				var m = [];
+				var mNum =[];
+				/* check if there is selected checkboxes, by default the length is 1 as it contains one single comma */
+				if(selected.length > 0 || selected2.length > 0){
+					var foodElements = [
+						["ผลไม้", "ผัก", "กุ้ง", "ไข่", "ยำแอปเปิ้ล"],["ปลา", "ผัก", "สเต๊กปลาดอรี่กับเผือกต้ม"],["ผัก", "ไข่","ผักโขมผัดไข่"],["ผลไม้","แป้งต่างๆ", "นม","ขนมกล้วย"],
+						["ผลไม้", "นม", "ถั่วต่างๆ", "เชอร์รี่โคโคนัทบาร์"],["ผัก", "ผลไม้", "กรีกสลัด"],["ผลไม้", "ผัก", "นม", "ถั่วต่างๆ", "ซุปฟักทอง"],["หมึก", "กุ้ง", "ปลา", "ผัก", "ผัดเปรี้ยวหวานทะเล"],
+						["ผลไม้", "ธัญพืช", "แป้งต่างๆ", "ไข่", "คุ้กกี้ข้าวโอ๊ตลูกเกด"],["ปลา", "ผัก", "ถั่วต่างๆ", "แป้งต่างๆ", "ไข่", "ปลานิลทอดแมคคาเดเมีย"],["ปลา", "แป้งต่างๆ", "ผัก", "สลัดโรลปูอัด"],["ผัก", "กุ้ง", "ถั่วต่างๆ", "ส้มตำ"],
+						["นม", "ผลไม้", "บิงซูมะม่วง"],["แป้งต่างๆ", "ผัก", "ผลไม้", "ไข่", "นม", "บัวลอยไข่หวาน"],["ถั่วต่างๆ", "นม", "ลูกชุบ"],["นม", "แป้งต่างๆ", "ไข่", "ผลไม้", "ข้าวเหนียวมะม่วง"],
+						["กุ้ง", "เนื้อหมู", "ผัก", "ไข่", "แป้งต่างๆ", "ปอเปี๊ยะกุ้งสด"],["เนื้อวัว", "แป้งต่างๆ", "ผัก", "ก๋วยเตี๋ยวราดหน้าเนื้อสับ"],["ปลา", "ธัญพืช", "ผัก", "แป้งต่างๆ", "ข้าวผัดธัญพืชกับสเต็กปลาแซลมอน"],["หมึก", "กุ้ง", "ผัก", "แป้งต่างๆ", "เบอร์ริโต้ลาบซีฟู้ด"],
+						["ผลไม้", "กล้วยน้ำว้าคลุกมะพร้าว"],["ผลไม้", "ไข่","แป้งต่างๆ", "ข้าวโพดผัดไข่เค็ม"],["ปลา", "ผัก", "นม","ฉู่ฉี่ปลาลีน"],["เนื้อไก่", "ผัก", "ซูชิอกไก่"],
+						["เนื้อหมู", "ผัก", "ต้มจืดถั่วงอก"],["ผัก", "น้ำพริกอ่องเต้าหู้"],["แป้งต่างๆ", "ไข่", "ผัก", "ผัดไทใส่ไข่"],["แป้งต่างๆ", "ผลไม้", "เนื้อปลา", "นม", "พิซซ่าขนมปัง"],
+						["แป้งต่างๆ", "ผัก", "ราดหน้าเต้าหู้น้ำแดง"],["ไข่", "เนื้อไก่", "ผัก", "ลาบไข่ขาว"]
+					]
+					
+					if(selected.length>0){
+						for(var i = 0;i<chkArray.length;i++){
+							for(var j = 0;j<foodElements.length;j++){
+								for(var k = 0;k<foodElements[j].length;k++){
+									if(chkArray[i] == foodElements[j][k]){
+										s.push(foodElements[j][foodElements[j].length-1]);
+										sNum.push(j+1);
+										m.push(foodElements[j][foodElements[j].length-1]);
+										mNum.push(j+1);
+									}
+									
+								}
+							}
+						}
+					  }
+					else{
+							for(var j = 0;j<foodElements.length;j++){
+								for(var k = 0;k<foodElements[j].length;k++){
+										s.push(foodElements[j][foodElements[j].length-1]);
+										sNum.push(j+1);
+										m.push(foodElements[j][foodElements[j].length-1]);
+										mNum.push(j+1);
+									
+									
+								}
+							}
+					}
+					 
+					if(selected2.length>0){
+						for(var i = 0;i<chkArray2.length;i++){
+							for(var j = 0;j<foodElements.length;j++){
+								for(var k = 0;k<foodElements[j].length;k++){
+									if(chkArray2[i] == foodElements[j][k]){
+										n.push(foodElements[j][foodElements[j].length-1]);
+										nNum.push(j+1);
+									}
+									
+								}
+							}
+						}
+					  }
+					
+					for(var i = 0;i<s.length;i++){
+							for(var j = 0;j<n.length;j++){
+									if(s[i] == n[j]){
+										remove(m,s[i]);
+										remove(mNum,sNum[i]);
+									}
+							}
+						}
+					var allRan = Math.floor((Math.random() * (mNum.length)) + 1);
+					$('#food').hide();
+					document.getElementById("text1").innerHTML = m[allRan-1];
+					if(allRan==shuffler1.value){
+							do{
+								allRan = Math.floor((Math.random() * (mNum.length)) + 1);
+							}while(allRan==shuffler1.value);
+							
+						}
+						
+						 var Ran2 = new WordShuffler(document.getElementById('text1'),{
+						  timeOffset : 2
+						});
+					
+					document.getElementById("link").setAttribute('href',"Food menu/menu"+mNum[allRan-1]+".html");
+					$('#food').css('backgroundImage', 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(random/ranPic/'+mNum[allRan-1]+'.jpg)');
+					$('#food').fadeIn(1500);	
+				}else{
+					var allRan = Math.floor((Math.random() * 30) + 1);
+					var foodName = ["ยำแอปเปิ้ล","สเต็กดอลลี่","ผักโขมผัดไข่","ขนมกล้วย","เชอร์รี่โคโคนัทบาร์","กรีกสลัด","ซุปฟักทอง","ผัดเปรี้ยวหวานทะเล","คุ้กกี้ข้าวโอ๊ดลูกเกด","ปลานิลทอดแมคคาเดเมีย","สลัดโรลปูอัด","ส้มตำ","บิงซู","บัวลอย","ลูกชุบ","ข้าวเหนียวมะม่วง","ปอเปี๊ยะกุ้งสด","ก๋วยเตี๋ยวราดหน้าเนื้อสับ","ข้าวผัดธัญพืชกับสเต็กปลาแซลมอน","เบอร์ริโต้ลาบซีฟู้ด","กล้วยน้ำว้าคลุกมะพร้าว","ข้าวโพดผัดไข่เค็ม","ฉู่ฉี่ปลาลีน","ซูชิอกไก่","ต้มจืดถั่วงอก","น้ำพริกอ่องเต้าหู้","ผัดไทใส่ไข่","พิซซ่าขนมปัง","ราดหน้าเต้าหู้น้ำแดง","ลาบไข่ขาว"];
+					document.getElementById("text1").innerHTML = foodName[allRan-1];
+					$('#food').hide();
+					if(allRan==shuffler1.value){
+							do{
+								allRan = Math.floor((Math.random() * 30) + 1);
+							}while(allRan==shuffler1.value);
+							
+						}
+						
+						 var Ran2 = new WordShuffler(document.getElementById('text1'),{
+						  timeOffset : 2
+						});
+					  
+						document.getElementById("link").setAttribute('href',"Food menu/menu"+allRan+".html");
+						$('#food').css('backgroundImage', 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(random/ranPic/'+allRan+'.jpg)');
+						$('#food').fadeIn(1500);
+						
+					}
+				
+				
+			}
+		  
+		  function remove(array, element) {
+			const index = array.indexOf(element);
+			array.splice(index, 1);
+		}
+		</script>
+		
+      	<script>
+			
+		function ckChange1(ckType){
+				var ckName = document.getElementsByName(ckType.name);
+				var checked = document.getElementById(ckType.id);
+				var anotherCkName;
+				var allergy= [];
+				
+				
+				if(ckName.value == ("Have").value){
+					anotherCkName = document.getElementsByName("Allergy");
+					atID = "a"+ckType.id;
+				}
+				
+				if (checked.checked) {
+      				for(var i=0; i < anotherCkName.length; i++){
+
+					  if((!anotherCkName[i].checked) && anotherCkName[i].id == ("a"+ckType.id)){
+						  anotherCkName[i].disabled = true;
+					  }
+				  } 
+				}
+				else {
+				  for(var i=0; i < anotherCkName.length; i++){
+					  if((!anotherCkName[i].checked) && anotherCkName[i].id == ("a"+ckType.id)){
+						  anotherCkName[i].disabled = false;
+					  }
+				  }
+				}    
+				
+			}
+			
+			function ckChange2(ckType){
+				var ckName = document.getElementsByName(ckType.name);
+				var checked = document.getElementById(ckType.id);
+				var anotherCkName;
+				var	checkedAnother;
+				var allergy= [];
+				
+				
+				if(ckName.value == ("Allergy").value){
+					anotherCkName = document.getElementsByName("Have");
+					atID = (ckType.id).substr(1);
+					checkedAnother = document.getElementById(atID);
+				}
+				
+				if (checked.checked) {
+      				for(var i=0; i < anotherCkName.length; i++){
+
+					  if((!anotherCkName[i].checked) && anotherCkName[i].id == ((ckType.id).substr(1))){
+						  anotherCkName[i].disabled = true;
+					  }
+				  } 
+				}
+				else {
+				  for(var i=0; i < anotherCkName.length; i++){
+					  if((!anotherCkName[i].checked) && anotherCkName[i].id == ((ckType.id).substr(1))){
+						  anotherCkName[i].disabled = false;
+					  }
+				  }
+				}    
+				
+			}
+		</script>
+      
+      
+
+    </div> <!-- /container -->
+	<div class="footer">
+    <p class="footerText">Copyright © Random Food,Inc. All Rights Reserved.<br>เลขที่ 1771/1 ซ.พัฒนาการ 37 ถนนพัฒนาการ แขวงสวนหลวง เขตสวนหลวง กรุงเทพฯ 10250
+<br>โทรศัพท์ 0-2763-2600</p>
+      	
+    </div>
+
+  </body>
+</html>

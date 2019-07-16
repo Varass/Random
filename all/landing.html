@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="in use/icon.png">
+    <title>Random Food</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="landing.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/home.js" type="text/javascript"></script>
+  </head>
+  <body>
+    
+    <video id="myVideo" muted plays-inline autoplay>
+  		<source src="video.mp4" type="video/mp4"/>
+	</video>
+    
+
+<script>
+
+document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+        setTimeout(function() {
+		  window.location = "home1ST.html";
+		}, 1000);
+    }
+
+</script>
+      
+      
+     
+	
+
+  </body>
+</html>
