@@ -1,0 +1,83 @@
+body{
+	background-image:url(../../month/in%20use/head.png),linear-gradient(#FFD150,#FF9827);
+	background-position: center top,center top;
+	background-size:100%,cover;
+	background-repeat: no-repeat,no-repeat;
+	font-family: 'Kanit', sans-serif;
+	padding-bottom: 0px;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 20px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 20px;
+	color: #F3903F;
+}
+
+.activeMenu{
+	font-weight: bold;
+	text-decoration: none;
+	color: #F3903F;
+}
+
+.activeMenu:hover{
+	font-weight: bold;
+	text-decoration: none;
+	color: #E0782B;
+}
+
+.nonactiveMenu{
+	font-weight: normal;
+	text-decoration: none;
+	color: #000000;
+}
+
+.nonactiveMenu:hover{
+	font-weight: normal;
+	text-decoration: none;
+	color: #A8D049;
+}
+
+.topnavAc {
+	border-bottom: 5px solid #F3903F;
+}
+
+.topnav {
+	border-bottom: 5px solid rgba(255,255,255,0.00);
+}
+
+.topnav:hover{
+	border-bottom: 5px solid #A8D049;
+	color: #E0782B;
+}
+
+.navbartop{
+	margin-top: -35px;
+}
+
+#nonactiveMenuAll a, #nonactiveMenuAll a:visited{
+	font-weight: normal;
+	text-decoration: none;
+	color: #232323;
+}
+
+#nonactiveMenuAll a:hover{
+	font-weight: bold;
+	color: #E0782B;
+}
+
+.foodNav{
+	padding-top: 12px;
+	font-size: 18px;
+}
+

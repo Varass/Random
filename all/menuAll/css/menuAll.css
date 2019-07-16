@@ -1,0 +1,510 @@
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+
+body{
+	background-image:url(../../month/in%20use/head.png),linear-gradient(#FFD150,#FF9827);
+	background-position: center top,center top;
+	background-size:100%,cover;
+	background-repeat: no-repeat,no-repeat;
+	font-family: 'Kanit', sans-serif;
+	padding-bottom: 0px;
+}
+
+.greyStrip{
+	max-width: 1140px;
+	height: 70px;
+	background-color:#F0F0F0;
+	margin-bottom: 0px;
+	margin-top: -10px;
+	}
+
+.topPageM{
+	background-image: url(../in%20use/menuBG.png);
+	background-position: bottom center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 350px;
+	max-width: 1140px;
+}
+
+.menuThai{
+	text-align:center; font-weight:bold; font-size:50px; margin-top:50px;
+}
+
+.menuReAroi{
+	text-align:center; font-size:18px; font-weight:lighter; line-height: 40px;
+}
+
+.menuTitleM{
+	font-family: 'Kanit', sans-serif;
+	margin-bottom: 0px;
+}
+
+.foodBox{
+	display:inline-block;
+    margin: 30px auto 20px auto;
+    column-count: 3;
+    width: 80%;
+}
+
+.buttonHowto1{
+	width: 230px; height: 75px;
+	top: 165px;
+	padding-top: 8px;
+	background-color: rgba(255,255,255,1.00);
+}
+
+.buttFood{
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.buttFood.longName{
+	font-size: 95%;
+	margin-top: 4px;
+}
+
+.buttonHowtoText1{
+	padding: 3px 70px;
+	font-size: 14px;
+	border-radius:8px;
+	position:static;
+	float: center;
+}
+
+.divImg{
+	height: 230px;	
+}
+
+#imgOne{
+	margin-top: 0px;
+}
+
+.box{
+	max-width: 1140px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 0px;	
+}
+.box.food{
+	background-color:rgba(174,214,110,1.00);
+}
+.box.healthy{
+	background-color:rgba(94,170,97,1.00);
+}
+.box.Veg{
+	background-color:rgba(40,177,141,1.00);
+}
+.box.dessert{
+	background-color:rgba(214,65,101,1.00);
+}
+
+.ulDesign{
+	margin-right: 0px;
+	padding: 0px;
+	width: 80%;
+	
+}
+
+.ulDesign li{
+	list-style-type:none;
+	display: inline-block;
+	margin: 50px auto;
+	padding: 0px;
+	width: 50%;
+	
+}
+
+.innerboxM{
+	width: 230px;
+	height: 230px;
+	margin: 50px auto;
+	position: sticky;
+}
+
+.img{
+	width: 100%;
+	height: 100%;
+	margin-top: -75px;
+}
+
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+    text-align: center;
+	padding: 0px;
+	max-width: 1140px;
+}
+
+.footer{
+	height: 200px;
+	background-color:rgba(215,122,41,1.00);
+	position:relative;
+}
+
+.footerText{
+	text-align: center;
+	font-size: 14px;
+	padding-top: 50px;
+}
+
+@media screen and (max-width: 1500px){
+	.buttonRandom3{
+	margin-top: 120px;
+	margin-left: 150px;
+	text-align: center;
+	width: 50%;
+	}
+	
+	.navbar-default {
+    	background-color: transparent;
+    	border-color: transparent;
+	}
+	
+	.navbartop{
+	margin-top: -70px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+
+.site-title{
+	width : 70%;
+}
+
+@media screen and (max-width: 1270px){
+	.navbar-default {
+    	background-color: transparent;
+    	border-color: transparent;
+	}
+	
+	.navbartop{
+	margin-top: -80px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+.site-title{
+		width: 70%;
+	}
+} /*nav*/
+
+@media screen and (max-width: 1230px){
+	.navbar-default {
+    	background-color: transparent;
+    	border-color: transparent;
+	}
+	
+	.navbartop{
+	margin-top: -90px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 12px;
+	color: #F3903F;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 12px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+	.container{
+		width: 90%;
+	}
+	.img{
+		margin-top: -60px;
+	}
+	.innerboxM{
+		margin-bottom: 50px; 
+	}
+	
+	.buttonHowto1{
+		top: 180px;
+	}
+	
+} /*nav*/
+	
+@media screen and (max-width: 1100px){
+		.innerboxM{
+		width: 200px;
+		height: 200px;
+		margin-bottom: 50px;
+	}
+	.foodBox{
+		display:inline-block;
+    	margin: 30px auto 20px auto;
+    	column-count: 3;
+    	width: 85%;
+}
+	.buttonHowto1{
+		width: 100%;
+		height: 55px;
+		top: 150px;
+		padding-top: 5px;
+	}
+	.buttFood{
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+	.buttFood.longName{
+		margin-top: 3px;
+		font-size: 70%;
+	}
+	.buttonHowtoText1{
+		font-size: 12px;
+		padding: 2px 60px;
+		border-radius: 5px;
+		
+	}
+	.divImg{
+		height: 180px;
+	}
+	.img{
+		padding-top: 10px;
+	}
+	#imgOne{
+		height: 200px;
+	}
+}
+
+	
+@media screen and (max-width: 990px){
+	.navbar-default {
+    	background-color: transparent;
+    	border-color: transparent;
+	}
+	
+	.navbartop{
+	margin-top: -140px;
+}
+	
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 12px;
+	color: #F3903F;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 12px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}
+
+.navbartop{
+	margin-top: -140px;
+}
+
+.foodNav{
+	padding-top: 15px;
+	font-size: 16px;
+}
+	.site-title{
+		width: 60%;
+	}
+	
+} /*nav + foodNav*/
+	
+@media screen and (max-width: 920px){
+	.innerboxM{
+		width: 180px;
+		height: 180px;
+		margin-bottom: 70px;
+	}
+	.foodBox{
+		display:inline-block;
+    	margin: 30px auto 20px auto;
+    	column-count: 3;
+    	width: 85%;
+}
+	.buttonHowto1{
+		width: 100%;
+		height: 50px;
+		top: 130px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.buttFood{
+		font-size: 12px;
+		margin-bottom: 3px;
+	}
+	.buttFood.longName{
+		font-size: 60%;
+	}
+	.buttonHowtoText1{
+		font-size: 12px;
+		padding: 2px 55px;
+		border-radius: 5px;
+		
+	}
+	#imgOne{
+		margin-bottom: 0px;
+	}
+	.container{
+		width: 95%;
+	}
+}
+
+
+@media screen and (max-width: 767px){
+	.foodNav{
+	padding-top: 15px;
+	font-size: 14px;
+	column-count: 4;
+	}
+	.menuReAroi{
+		font-size: 15px;
+	}
+	.topPageM{
+		height: 330px;
+	}
+	.foodBox{
+		column-count: 2;
+    	margin: 30px 5px 20px 5px;
+		width: 80%;
+	}
+	.innerboxM{
+		width: 160px;
+		height: 160px;
+		margin-bottom: 50px;
+		margin-top: 10px;
+	}
+	
+	.buttonHowto1{
+		width: 100%;
+		height: 50px;
+		top: 130px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.buttFood{
+		font-size: 12px;
+		margin-bottom: 3px;
+	}
+	.buttonHowtoText1{
+		font-size: 12px;
+		padding: 2px 55px;
+		border-radius: 5px;
+		
+	}
+	.divImg{
+		height: 150px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.navbar-default {
+    	background-color: transparent;
+    	border-color: transparent;
+	}
+	
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+}
+
+.navbartop{
+	margin-top: -50px;
+}
+
+.navbar {
+ 	margin-bottom: 20px;
+  	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	color: #F3903F;
+	margin-top: 130px;
+	margin-left: 30px;
+}	
+} /*nav*/
+
+.footerText{
+	text-align: center;
+	font-size: 14px;
+	padding-top: 50px;
+}
+
+ /*button + foot text + pic*/
+
+.footerText{
+	text-align: center;
+	font-size: 14px;
+	padding-top: 50px;
+}
+/*button + foot text + pic*/
+
+@media screen and (max-width: 620px){
+	.foodNav{
+	padding-top: 15px;
+	font-size: 14px;
+	column-count: 4;
+	}
+	.nav>li>a{
+		padding: 10px 5px;
+	}
+	.foodBox{
+		width: 85%;
+	}
+	.container{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 560px){
+.footerText{
+	text-align: center;
+	font-size: 12px;
+	padding-top: 50px;
+	}
+
+	.foodNav{
+	padding-top: 15px;
+	font-size: 14px;
+	column-count: 1;
+	}
+	
+	.greyStrip{
+		height: 200px;
+	}
+		
+} /*button*/
